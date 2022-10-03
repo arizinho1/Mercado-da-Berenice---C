@@ -1,122 +1,13 @@
-# Mercado-da-Berenice-V.1 - C
+# Bem-vindo ao meu primeiro projeto da faculdade de Eng de Software!
+### Neste primeiro projeto da faculdade, os professores nos propuseram a criar uma interface de compras para a Berenice, que seria a dona da loja!, e para este projeto somente utilizamos a linguagem C.
+![image](https://user-images.githubusercontent.com/99341812/193695692-f8788a30-cf64-4983-8692-ba5c35a4d838.png)
 
-#include <stdio.h> #include <stdlib.h> #include <locale.h>
+Este projeto tem o intuito de executar uma venda por vez, dentre 5 itens do estoque da loja, depois de selecionar o item desejado, escolhe a quantidade unitária do item, após isso, a interface mostra o valor da compra, e pergunta se o pagamento será a vista, ou a prazo. Se for a vista, e o subtotal da compra for maior que 0 e menor ou igual a 50 reais, aplica-se um desconto de 5% ao valor final da compra, se o subtotal for entre 50 e 100 reais, aplica-se um desconto de 10% ao valor final da compra, se for maior que 100 reais, aplica-se um desconto de 18% ao valor final da compra, e pergunta se o comprador precisa de troco.
 
-int main() { setlocale(LC_ALL, "Portuguese"); int opc, qtdItem, pagamento,parcelas; float forma = 7.50, centeio = 8.69, broa = 5.0, refri = 8.0, sonho = 5.0, vt, vtp, valorParcelas;
+![image](https://user-images.githubusercontent.com/99341812/193697189-ad630012-d915-4e08-b464-17972004327c.png)
 
-do{
-    printf("Seja bem vindo a padaria da Berenice\n");
-    printf("Para comprar selecione a opção desejada\n");
-    printf("1 - Forma - \n2 - Centeio - \n3 - Broa - \n4 - Refrigerante - \n5 - Sonho - \n0 - para sair\n");
+Se o comprador optar pela compra a prazo e escolher entre 1 e 3 parcelas, vai haver um acréscimo de 5% no valor final da compra, se forem mais de 3 parcelas, será um acréscimo de 8% no subtotal da compra.
 
-    scanf("%d",&opc);
-    getchar();
-    system ("cls");
-    switch(opc){
-        case 1:
-            printf("Digite a quantidade de pães de forma desejada: \n");
-            scanf("%d",&qtdItem);
-            vt=qtdItem*forma;
-            printf("\nEscolha a forma de pagamento\n1 - A vista -\n2 - Parcelado\n");
-            scanf("%d",&pagamento);
-            getchar();
-            system("cls");
-            if(pagamento==1){
-                printf("O valor da sua compra é:R$%.2f\n",vt);
+![image](https://user-images.githubusercontent.com/99341812/193703003-9fa2c6ba-26f8-443d-be54-3065fe798f95.png)
 
-            }else{
-                printf("Insira a quantidade de parcelas\n");
-                scanf("%d",&parcelas);
-                printf("o valor total parcelado para compra de pães de forma é:R$%.2f\n",vtp=vt*1.03);
-                printf("o valor das suas %d parcelas será:R$%.2f cada uma\n",parcelas,valorParcelas=vtp/parcelas);
-            }
-            break;
-        case 2:
-            printf("Digite a quantidade de pães de centeio desejada: \n");
-            scanf("%d",&qtdItem);
-            vt=qtdItem*centeio;
-            printf("\nEscolha a forma de pagamento\n1 - A vista -\n2 - Parcelado\n");
-            scanf("%d",&pagamento);
-            getchar();
-            system("cls");
-            if(pagamento==1){
-                printf("O valor da sua compra é:R$%.2f\n",vt);
-            }else{
-                printf("Insira a quantidade de parcelas\n");
-                scanf("%d",&parcelas);
-                getchar;
-                printf("o valor total parcelado é:R$%.2f\n",vtp=vt*1.03);
-                printf("o valor das suas %d parcelas será:R$%.2f cada uma\n",parcelas,valorParcelas=vtp/parcelas);
-            }
-            break;
-        case 3:
-            printf("Digite a quantidade de Broa desejada: \n");
-            scanf("%d",&qtdItem);
-            getchar();
-            vt=qtdItem*broa;
-            printf("\nEscolha a forma de pagamento\n1 - A vista -\n2 - Parcelado\n");
-            scanf("%d",&pagamento);
-            getchar();
-            system("cls");
-            if(pagamento==1){
-                printf("O valor da sua compra é:R$%.2f\n",vt);
-            }else{
-                printf("Insira a quantidade de parcelas\n");
-                scanf("%d",&parcelas);
-                getchar();
-                printf("o valor total parcelado é:R$%.2f\n",vtp=vt*1.03);
-                printf("o valor das suas %d parcelas será:R$%.2f cada uma\n",parcelas,valorParcelas=vtp/parcelas);
-            }
-            break;
-        case 4:
-            printf("Digite a quantidade de refrigerantes desejada: \n");
-            scanf("%d",&qtdItem);
-            getchar();
-            vt=qtdItem*refri;
-            printf("\nEscolha a forma de pagamento\n1 - A vista -\n2 - Parcelado\n");
-            scanf("%d",&pagamento);
-            getchar();
-            system("cls");
-            if(pagamento==1){
-                printf("O valor da sua compra é:R$%.2f\n",vt);
-            }else{
-                printf("Insira a quantidade de parcelas\n");
-                scanf("%d",&parcelas);
-                getchar();
-                printf("o valor total parcelado é:R$%.2f\n",vtp=vt*1.03);
-                printf("o valor das suas %d parcelas será:R$%.2f cada uma\n",parcelas,valorParcelas=vtp/parcelas);
-            }
-            break;
-        case 5:
-            printf("Digite a quantidade de sonhos: \n");
-            scanf("%d",&qtdItem);
-            getchar();
-            vt=qtdItem*sonho;
-            printf("\nEscolha a forma de pagamento\n1 - A vista -\n2 - Parcelado\n");
-            scanf("%d",&pagamento);
-            getchar();
-            system("cls");
-            if(pagamento==1){
-                printf("O valor da sua compra é:R$%.2f\n",vt);
-            }else{
-                printf("Insira a quantidade de parcelas\n");
-                scanf("%d",&parcelas);
-                getchar();
-                printf("o valor total parcelado é:R$%.2f\n",vtp=vt*1.03);
-                printf("o valor das suas %d parcelas será:R$%.2f cada uma\n",parcelas,valorParcelas=vtp/parcelas);
-            }
-
-            break;
-        case 0:
-            break;
-
-
-        default:
-            printf("Valor inválido, digite um número de 1 a 5\n");
-
-    }
-  printf("Deseja continuar a compra? Aperte 0 para sair\n");
-  scanf("%d",&opc);
-}while(opc!=0);
-
-return 0;
+Esse foi o projeto do primeiro mês de faculdade!.
